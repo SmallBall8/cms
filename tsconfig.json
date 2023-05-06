@@ -1,13 +1,13 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],//哪些文件需要编译
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue","auto-imports.d.ts","components.d.ts"], //哪些文件需要编译
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-
+      "@/*": ["./src/*"]
     },
-    "noImplicitAny":false
+    "noImplicitAny": false,
+    //"types": ["element-plus/global"]
   },
 
   "references": [
@@ -15,6 +15,4 @@
       "path": "./tsconfig.config.json"
     }
   ]
-
-
 }
